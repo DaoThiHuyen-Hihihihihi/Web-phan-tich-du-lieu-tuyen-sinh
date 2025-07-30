@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: #FFFFFF;
     color: #000000;
+    overflow: hidden;
+    /* Ẩn thanh cuộn */
+    max-height: 100vh;
 }
 
 header {
@@ -110,8 +113,8 @@ h1 {
     position: absolute;
     width: 560px;
     height: 700px;
-    right: 0;
-    top: 0;
+    right: 100px;
+    top: 50px;
     background: linear-gradient(to bottom, #6092FE, #FFFFFF);
     border-radius: 280px 0px 140px 0px;
 }
@@ -119,9 +122,12 @@ h1 {
 .hero-image img {
     position: absolute;
     width: 631px;
-    height: 859px;
-    left: 26px;
-    top: 0;
+    height: 764px;
+    /* Cắt chiều cao ảnh bằng chiều cao hero-image */
+    right: 0;
+    top: 50px;
     object-fit: cover;
     z-index: 1;
+    max-height: 100vh;
+    clip-path: inset(0 0 0 0);
 }

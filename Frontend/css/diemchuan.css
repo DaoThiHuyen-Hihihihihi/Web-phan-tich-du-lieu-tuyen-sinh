@@ -1,0 +1,56 @@
+body {
+    font-family: 'K2D', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #000000;
+    overflow: hidden;
+    /* Ẩn thanh cuộn */
+    max-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 67px;
+    height: 75px;
+    background-color: #F7F7F7;
+}
+
+.logo {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 0.3em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 86px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+}
+
+nav a.active {
+    font-weight: 700;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    bottom: -6px;
+    left: 0;
+}
