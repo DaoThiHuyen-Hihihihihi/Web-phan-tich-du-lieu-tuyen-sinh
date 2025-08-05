@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tra cứu điểm thi đại học</title>
+    <link rel="stylesheet" href="../css/tracuu.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=K2D:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">BIT-BAV</div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Trang chủ</a></li>
+          <li><a href="#" class="active">Tra cứu điểm thi đại học</a></li>
+          <li><a href="phodiem.html">Phổ điểm thi đại học</a></li>
+          <li><a href="diemchuan.html">Điểm chuẩn CĐ - ĐH</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="search-container">
+        <h1>Tra cứu điểm thi tốt nghiệp THPT 2025</h1>
+        <form id="searchForm">
+          <div class="search-box">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="#888888"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 21L16.65 16.65"
+                stroke="#888888"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              type="text"
+              id="sbdInput"
+              placeholder="Nhập vào số báo danh"
+            />
+            <button type="submit">Tìm Kiếm</button>
+          </div>
+        </form>
+        <div
+          id="loadingMessage"
+          class="message loading-message"
+          style="display: none"
+        >
+          Đang tìm kiếm...
+        </div>
+        <div
+          id="errorMessage"
+          class="message error-message"
+          style="display: none"
+        ></div>
+        <div
+          id="resultsContainer"
+          class="results-container"
+          style="display: none"
+        ></div>
+      </div>
+    </main>
+    <script src="../js/tracuu.js"></script>
+  </body>
+</html>
