@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gợi ý ngành, trường học</title>
+    <link rel="stylesheet" href="../css/goiy.css" />
+    <link rel="stylesheet" href="../css/navigate.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">BIT-BAV</div>
+      <nav>
+        <ul>
+          <li><a class="dichuot" href="home.html">Trang chủ</a></li>
+          <li>
+            <a class="dichuot" href="tracuu.html">Tra cứu điểm thi đại học</a>
+          </li>
+          <li>
+            <a class="dichuot" href="phodiem.html">Phổ điểm thi đại học</a>
+          </li>
+          <li>
+            <a class="dichuot" href="diemchuan.html">Điểm chuẩn CĐ - ĐH</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="suggestion-form">
+        <h1>Gợi ý ngành, trường học phù hợp</h1>
+        <p>Bạn đang chưa biết ngành học hay trường học phù hợp?</p>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="diem-thi">Điểm thi *:</label>
+              <input type="text" id="diem-thi" placeholder="Nhập điểm ..." />
+            </div>
+            <div class="form-group">
+              <label for="diem-hoc-ba">Điểm học bạ:</label>
+              <input type="text" id="diem-hoc-ba" placeholder="Nhập điểm ..." />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="diem-cong">Điểm cộng (nếu có):</label>
+              <input type="text" id="diem-cong" placeholder="Nhập điểm ..." />
+            </div>
+            <div class="form-group">
+              <label for="diem-nang-luc">Điểm năng lực:</label>
+              <input
+                type="text"
+                id="diem-nang-luc"
+                placeholder="Nhập điểm ..."
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="to-hop-xet-tuyen">Tổ hợp xét tuyển:</label>
+              <select id="to-hop-xet-tuyen">
+                <option value="">Chọn tổ hợp môn thi</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Chọn Khu vực</label>
+              <div class="khu-vuc-group">
+                <button type="button" class="khu-vuc-btn">
+                  Chọn Khu vực <span class="badge">0</span>
+                </button>
+                <div class="checkbox-group">
+                  <input type="checkbox" id="bac" name="khu-vuc" value="bac" />
+                  <label for="bac">Bắc</label>
+                  <input
+                    type="checkbox"
+                    id="trung"
+                    name="khu-vuc"
+                    value="trung"
+                  />
+                  <label for="trung">Trung</label>
+                  <input type="checkbox" id="nam" name="khu-vuc" value="nam" />
+                  <label for="nam">Nam</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="thanh-pho">Thành phố:</label>
+              <select id="thanh-pho">
+                <option value="">Chọn Tỉnh thành</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <button type="submit" class="submit-btn">Xem ngay</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

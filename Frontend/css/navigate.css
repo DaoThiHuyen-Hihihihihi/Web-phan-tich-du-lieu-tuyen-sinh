@@ -40,6 +40,9 @@ nav a {
   font-weight: 400;
   position: relative;
 }
+nav a:hover.dichuot {
+  color: #007bff;
+}
 
 nav a.active {
   font-weight: 700;
