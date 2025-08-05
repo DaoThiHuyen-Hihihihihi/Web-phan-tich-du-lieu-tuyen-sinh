@@ -3,22 +3,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tra cứu điểm thi đại học</title>
-    <link rel="stylesheet" href="../css/tracuu.css" />
+    <link rel="stylesheet" href="../css/navigate.css" />
+    <link rel="stylesheet" href="../css/ketqua-tracuu.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=K2D:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
 
-  <body>
+  <body style="overflow: hidden">
     <header>
       <div class="logo">BIT-BAV</div>
       <nav>
         <ul>
           <li><a href="home.html">Trang chủ</a></li>
           <li><a href="#" class="active">Tra cứu điểm thi đại học</a></li>
-          <li><a href="phodiem.html">Phổ điểm thi đại học</a></li>
-          <li><a href="diemchuan.html">Điểm chuẩn CĐ - ĐH</a></li>
+          <li>
+            <a href="phodiem.html">Phổ điểm thi đại học</a>
+          </li>
+          <li>
+            <a href="diemchuan.html">Điểm chuẩn CĐ - ĐH</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -50,9 +55,46 @@
               />
             </svg>
             <input type="text" placeholder="Nhập vào số báo danh" />
-            <button type="submit">Tìm Kiếm</button>
+            <a type="button" class="search-button">Tìm Kiếm</a>
           </div>
         </form>
+        <div class="result-container">
+          <div class="sbd-container">
+            <img src="../images/sbd.png" alt="So bao danh" />
+            <div class="sbd-text">
+              <p>Số báo danh</p>
+              <p class="sbd-number">01234567</p>
+            </div>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Môn</th>
+                  <th>Điểm</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Môn 1</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>Môn 2</td>
+                  <td>9</td>
+                </tr>
+                <tr>
+                  <td>Môn 3</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>Môn 4</td>
+                  <td>7</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </main>
   </body>
