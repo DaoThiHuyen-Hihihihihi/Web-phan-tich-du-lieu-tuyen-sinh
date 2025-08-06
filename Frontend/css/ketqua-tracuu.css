@@ -1,0 +1,133 @@
+main {
+  height: calc(100vh - 75px);
+  background: linear-gradient(
+    to bottom,
+    #8dbcf6b5 0%,
+    #d4ddf8 50%,
+    #d7e6f686 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+}
+
+.search-container {
+  text-align: center;
+}
+
+.search-container h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 60px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #ececec;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 855px;
+}
+
+.search-box svg {
+  margin-right: 10px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 20px;
+  flex-grow: 1;
+}
+
+.search-box a.search-button {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+.search-box a.search-button:hover {
+  background-color: #555555;
+}
+
+.result-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  background-color: #f8f9fa;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.sbd-container {
+  position: relative;
+  text-align: center;
+  color: #0056b3;
+}
+
+.sbd-container img {
+  width: 250px;
+  height: 250px;
+}
+
+.sbd-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "K2D", sans-serif;
+  margin-top: -24px;
+}
+
+.sbd-text p {
+  margin: 0;
+  font-size: 25px;
+}
+
+.sbd-number {
+  font-size: 35px !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.table-container table {
+  width: 400px;
+  border-collapse: collapse;
+  font-family: "K2D", sans-serif;
+}
+
+.table-container th,
+.table-container td {
+  border: 1px solid #dee2e6;
+  padding: 15px;
+  text-align: center;
+}
+
+.table-container th {
+  background-color: #87ceeb;
+  color: white;
+  font-size: 20px;
+}
+
+.table-container td {
+  font-size: 18px;
+}
+
+.table-container tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
