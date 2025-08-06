@@ -1,0 +1,147 @@
+body {
+  font-family: "K2D", sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #555;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a.dichuot:hover,
+nav ul li a.active {
+  color: #007bff;
+}
+
+.main-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.search-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.search-bar,
+.filter-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-bar .full-width {
+  flex-grow: 1;
+}
+
+.search-input-group,
+.filter-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.search-input-group label,
+.filter-input-group label {
+  font-size: 14px;
+  color: #555;
+}
+
+.search-input-group select,
+.search-input-group input,
+.filter-input-group select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-bar .search-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar .search-button:hover {
+  background-color: #0056b3;
+}
+
+.results-table-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid #dee2e6;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.results-table th {
+  background-color: #e9ecef;
+  font-weight: 700;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .search-bar,
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

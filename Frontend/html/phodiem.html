@@ -33,8 +33,19 @@
 
       <div class="filter-bar">
         <button class="active">Phổ điểm theo môn thi</button>
-        <button>Phổ điểm theo khối thi</button>
-        <button>Điểm trung bình các tỉnh thành</button>
+        <label for="subject-select">Môn thi</label>
+        <select name="subject" id="subject-select">
+          <option value="tatca.html">Tất cả</option>
+          <option value="toan.html">Toán</option>
+          <option value="vatly.html">Vật Lý</option>
+          <option value="hoahoc.html">Hóa Học</option>
+          <option value="sinhoc.html">Sinh Học</option>
+          <option value="van.html">Văn</option>
+          <option value="lichsu.html">Lịch Sử</option>
+          <option value="dialy.html">Địa Lý</option>
+          <option value="gdcd.html">Giáo dục công dân</option>
+          <option value="ngoaingu.html">Ngoại Ngữ</option>
+        </select>
       </div>
 
       <div class="subject-row">
@@ -210,5 +221,15 @@
         </div>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("subject-select")
+        .addEventListener("change", function () {
+          var selectedValue = this.value;
+          if (selectedValue) {
+            window.location.href = selectedValue;
+          }
+        });
+    </script>
   </body>
 </html>

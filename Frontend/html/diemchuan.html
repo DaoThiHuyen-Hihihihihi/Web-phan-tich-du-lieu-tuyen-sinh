@@ -27,5 +27,59 @@
         </ul>
       </nav>
     </header>
+
+    <div class="main-content">
+      <h1 class="main-title">Tra cứu điểm chuẩn CĐ - ĐH</h1>
+      <div class="search-section">
+        <div class="search-bar">
+          <div class="search-input-group">
+            <label for="university-type">Hệ đại học</label>
+            <select name="university-type" id="university-type">
+              <option value="dai-hoc">Đại học</option>
+              <option value="cao-dang">Cao đẳng</option>
+            </select>
+          </div>
+          <div class="search-input-group full-width">
+            <label for="search-input">Nhập tên trường / tỉnh trường</label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Nhập tên trường"
+            />
+          </div>
+          <button class="search-button">Tra cứu</button>
+        </div>
+        <div class="filter-bar">
+          <div class="filter-input-group">
+            <label for="city">Chọn Tỉnh thành</label>
+            <select name="city" id="city">
+              <option value="">Chọn Tỉnh thành</option>
+            </select>
+          </div>
+          <div class="filter-input-group">
+            <label for="major">Chọn Ngành</label>
+            <select name="major" id="major">
+              <option value="">Chọn ngành</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="results-table-container">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Ngành</th>
+              <th>Điểm chuẩn</th>
+              <th>Hệ</th>
+              <th>Khối thi</th>
+              <th>Địa chỉ</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
   </body>
 </html>
