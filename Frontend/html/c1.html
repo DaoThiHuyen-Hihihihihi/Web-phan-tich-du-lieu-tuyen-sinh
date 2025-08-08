@@ -1,0 +1,197 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phổ diểm thi đại học</title>
+    <link rel="stylesheet" href="../css/navigate.css" />
+    <link rel="stylesheet" href="../css/phodiem.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=K2D:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">BIT-BAV</div>
+      <nav>
+        <ul>
+          <li><a class="dichuot" href="home.html">Trang chủ</a></li>
+          <li>
+            <a class="dichuot" href="tracuu.html">Tra cứu điểm thi đại học</a>
+          </li>
+          <li><a href="#" class="active">Phổ điểm thi đại học</a></li>
+          <li>
+            <a class="dichuot" href="diemchuan.html">Điểm chuẩn CĐ - ĐH</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-content">
+      <h1 class="main-title">Phổ điểm thi tốt nghiệp THPT</h1>
+
+      <div class="filter-bar">
+<button class="filter-button" data-target="mon-thi-page">Phổ điểm theo môn thi</button>
+<button class="active" data-target="khoi-thi-page">Phổ điểm theo khối thi</button>
+<button class="filter-button" data-target="tinh-thanh-page">Điểm trung bình các tỉnh thành</button>
+
+        <label for="subject-select">Khối thi</label>
+        <select name="subject" id="subject-select">
+          <option value="a.html" >A</option>
+          <option value="a1.html" >A1</option>
+
+          <option value="b.html">B</option>
+
+          <option value="b1.html">B1</option>
+
+          <option value="c.html">C</option>
+
+          <option value="c1.html" selected>C1</option>
+
+          <option value="d.html">D</option>
+
+          <option value="d1.html">D1</option>
+        </select>
+      </div>
+
+      <div class="subject-row">
+        <div class="subject-card">
+          <div class="subject-title">PHỔ ĐIỂM KHỐI C1</div>
+          <div class="score-stats">
+            <div class="stat-box">
+              <div class="label">Tổng số thí sinh</div>
+              <div class="value">1137417</div>
+            </div>
+            <div class="stat-box">
+              <div class="label">Điểm trung bình</div>
+              <div class="value">6.80</div>
+            </div>
+            <div class="stat-box">
+              <div class="label">Điểm > 5</div>
+              <div class="value">693</div>
+            </div>
+            <div class="stat-box">
+              <div class="label">Điểm < 5</div>
+              <div class="value">637028</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="score-distribution-container">
+          <table class="distribution-table">
+            <thead>
+              <tr>
+                <th>Điểm</th>
+                <th>Số lượng</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0.2</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0.4</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0.6</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>0.8</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1.0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1.2</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1.4</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1.6</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>1.8</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2.0</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2.2</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2.4</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2.6</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>2.8</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>3.0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+     
+    <script>
+      document
+        .getElementById("subject-select")
+        .addEventListener("change", function () {
+          var selectedValue = this.value;
+          if (selectedValue) {
+            window.location.href = selectedValue;
+          }
+        });
+    </script>
+      <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Function to handle page navigation for buttons
+        const filterButtons = document.querySelectorAll('.filter-button, .active');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetPage = button.getAttribute('data-target');
+                if (targetPage === 'mon-thi-page') {
+                    window.location.href = 'phodiem.html'; // Or whatever your main page for mon-thi is
+                } else if (targetPage === 'khoi-thi-page') {
+                    window.location.href = 'khoi-thi.html'; // The page for khối thi
+                } else if (targetPage === 'tinh-thanh-page') {
+                    window.location.href = 'tinh-thanh.html'; // The page for tinh thanh
+                }
+            });
+        });
+
+        // Your existing dropdown navigation logic
+        document.getElementById("subject-select").addEventListener("change", function () {
+            var selectedValue = this.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        });
+    });
+</script>
+  </body>
+</html>

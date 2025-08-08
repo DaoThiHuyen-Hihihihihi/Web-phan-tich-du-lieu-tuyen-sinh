@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điểm trung bình các tỉnh thành</title>
+    <link rel="stylesheet" href="../css/navigate.css" />
+    <link rel="stylesheet" href="../css/phodiem.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=K2D:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">BIT-BAV</div>
+      <nav>
+        <ul>
+          <li><a class="dichuot" href="home.html">Trang chủ</a></li>
+          <li>
+            <a class="dichuot" href="tracuu.html">Tra cứu điểm thi đại học</a>
+          </li>
+          <li>
+            <a class="active" href="phodiem-tinh.html">Phổ điểm thi đại học</a>
+          </li>
+          <li>
+            <a class="dichuot" href="diemchuan.html">Điểm chuẩn CĐ - ĐH</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-content">
+      <h1 class="main-title">Điểm trung bình các tỉnh thành</h1>
+
+      <div class="filter-bar">
+        <button
+          class="filter-button"
+          onclick="window.location.href='phodiem.html'"
+        >
+          Phổ điểm theo môn thi
+        </button>
+        <button
+          class="filter-button"
+          onclick="window.location.href='khoi-thi.html'"
+        >
+          Phổ điểm theo khối thi
+        </button>
+        <button
+          class="filter-button active"
+          onclick="window.location.href='tinh-thanh.html'"
+        >
+          Điểm trung bình các tỉnh thành
+        </button>
+      </div>
+
+      <div class="filter-dropdowns">
+        <label for="year-select">Năm</label>
+        <select id="year-select">
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+        </select>
+
+        <label for="province-select">Tỉnh thành</label>
+        <select id="province-select">
+          <option value="hanoi">Hà Nội</option>
+          <option value="hcm">TP. Hồ Chí Minh</option>
+          <option value="danang">Đà Nẵng</option>
+        </select>
+      </div>
+
+      <div id="province-data-display" class="subject-row-container">
+        <p class="placeholder-text">
+          Chọn năm và tỉnh thành để xem điểm trung bình.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const data = {
+        provinces: {
+          2024: {
+            hanoi: {
+              toan: { tong: 100000, TB: 7.2, lonhon5: 85000, behon5: 15000 },
+              van: { tong: 98000, TB: 6.8, lonhon5: 80000, behon5: 18000 },
+              vatly: { tong: 60000, TB: 7.5, lonhon5: 55000, behon5: 5000 },
+            },
+            hcm: {
+              toan: { tong: 100000, TB: 7.2, lonhon5: 85000, behon5: 15000 },
+              van: { tong: 98000, TB: 6.8, lonhon5: 80000, behon5: 18000 },
+              vatly: { tong: 60000, TB: 7.5, lonhon5: 55000, behon5: 5000 },
+            },
+          },
+          2023: {
+            hanoi: {
+              toan: { tong: 100000, TB: 7.2, lonhon5: 85000, behon5: 15000 },
+              van: { tong: 98000, TB: 6.8, lonhon5: 80000, behon5: 18000 },
+              vatly: { tong: 60000, TB: 7.5, lonhon5: 55000, behon5: 5000 },
+            },
+          },
+        },
+      };
+
+      const renderStatsCard = (data, title) => {
+        return `
+          <div class="subject-card">
+            <div class="subject-title">${title}</div>
+            <div class="score-stats">
+              <div class="stat-box">
+                <div class="label">Tổng số thí sinh</div>
+                <div class="value">${data.tong.toLocaleString()}</div>
+              </div>
+              <div class="stat-box">
+                <div class="label">Điểm trung bình</div>
+                <div class="value">${data.TB}</div>
+              </div>
+              <div class="stat-box">
+                <div class="label">Điểm > 5</div>
+                <div class="value">${data.lonhon5.toLocaleString()}</div>
+              </div>
+              <div class="stat-box">
+                <div class="label">Điểm < 5</div>
+                <div class="value">${data.behon5.toLocaleString()}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      };
+
+      const setupProvinceFilters = () => {
+        const yearSelect = document.getElementById("year-select");
+        const provinceSelect = document.getElementById("province-select");
+        const displayArea = document.getElementById("province-data-display");
+
+        const renderProvinceData = () => {
+          const selectedYear = yearSelect.value;
+          const selectedProvince = provinceSelect.value;
+          const provinceData = data.provinces[selectedYear]?.[selectedProvince];
+
+          if (!provinceData) {
+            displayArea.innerHTML =
+              '<p class="placeholder-text">Không tìm thấy dữ liệu cho lựa chọn này.</p>';
+            return;
+          }
+
+          let htmlContent = "";
+          for (const subject in provinceData) {
+            const subjectData = provinceData[subject];
+            htmlContent += renderStatsCard(
+              subjectData,
+              `Điểm trung bình môn ${subject.toUpperCase()}`
+            );
+          }
+          displayArea.innerHTML = htmlContent;
+        };
+
+        yearSelect.addEventListener("change", renderProvinceData);
+        provinceSelect.addEventListener("change", renderProvinceData);
+        renderProvinceData();
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        setupProvinceFilters();
+      });
+    </script>
+  </body>
+</html>
