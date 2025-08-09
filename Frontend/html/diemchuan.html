@@ -16,7 +16,7 @@
       <div class="logo">BIT-BAV</div>
       <nav>
         <ul>
-          <li><a class="dichuot" href="home.html">Trang chủ</a></li>
+          <li><a class="dichuot" href="/index.html">Trang chủ</a></li>
           <li>
             <a class="dichuot" href="tracuu.html">Tra cứu điểm thi đại học</a>
           </li>
@@ -54,12 +54,19 @@
             <label for="city">Chọn Tỉnh thành</label>
             <select name="city" id="city">
               <option value="">Chọn Tỉnh thành</option>
+              <option>Hà Nội</option>
+              <option>TP. Hồ Chí Minh</option>
+              <option>Thanh Hóa</option>
+              <option>Sài Gòn</option>
             </select>
           </div>
           <div class="filter-input-group">
             <label for="major">Chọn Ngành</label>
             <select name="major" id="major">
               <option value="">Chọn ngành</option>
+              <option>Công nghệ thông tin</option>
+              <option>Kinh tế</option>
+              <option>Luật</option>
             </select>
           </div>
         </div>
@@ -77,7 +84,17 @@
               <th>Địa chỉ</th>
             </tr>
           </thead>
-          <tbody></tbody>
+          <tbody>
+            {/* Ví dụ dữ liệu */}
+            <tr>
+              <td className="p-2">1</td>
+              <td className="p-2">Công nghệ thông tin</td>
+              <td className="p-2">25.5</td>
+              <td className="p-2">Đại học</td>
+              <td className="p-2">A00</td>
+              <td className="p-2">Hà Nội</td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
