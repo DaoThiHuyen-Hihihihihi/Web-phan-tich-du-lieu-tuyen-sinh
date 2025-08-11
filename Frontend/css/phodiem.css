@@ -87,6 +87,14 @@ h1.main-title {
   margin-bottom: 20px;
 }
 
+#subject-select {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+}
+
 .subject-card {
   background-color: #f7f9fc;
   padding: 15px;
