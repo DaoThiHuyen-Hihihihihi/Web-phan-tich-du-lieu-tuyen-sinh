@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,7 +12,7 @@
     />
   </head>
 
-  <body style="overflow: hidden">
+  <body>
     <header>
       <div class="logo">BIT-BAV</div>
       <nav>
@@ -19,7 +20,9 @@
           <li><a class="dichuot" href="/index.html">Trang chủ</a></li>
           <li><a href="#" class="active">Tra cứu điểm thi đại học</a></li>
           <li>
-            <a class="dichuot" href="phodiem.html">Phổ điểm thi đại học</a>
+            <a class="dichuot" href="phodiem_monthi.html"
+              >Phổ điểm thi đại học</a
+            >
           </li>
           <li>
             <a class="dichuot" href="diemchuan.html">Điểm chuẩn CĐ - ĐH</a>
@@ -30,7 +33,7 @@
     <main>
       <div class="search-container">
         <h1>Tra cứu điểm thi tốt nghiệp THPT 2025</h1>
-        <form>
+        <form id="search-form">
           <div class="search-box">
             <svg
               width="24"
@@ -54,48 +57,17 @@
                 stroke-linejoin="round"
               />
             </svg>
-            <input type="text" placeholder="Nhập vào số báo danh" />
-            <a type="button" class="search-button">Tìm Kiếm</a>
+            <input
+              type="text"
+              id="sbd-input"
+              placeholder="Nhập vào số báo danh"
+            />
+            <button type="submit" class="search-button">Tìm Kiếm</button>
           </div>
         </form>
-        <div class="result-container">
-          <div class="sbd-container">
-            <img src="../images/sbd.png" alt="So bao danh" />
-            <div class="sbd-text">
-              <p>Số báo danh</p>
-              <p class="sbd-number">01234567</p>
-            </div>
-          </div>
-          <div class="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Môn</th>
-                  <th>Điểm</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Môn 1</td>
-                  <td>10</td>
-                </tr>
-                <tr>
-                  <td>Môn 2</td>
-                  <td>9</td>
-                </tr>
-                <tr>
-                  <td>Môn 3</td>
-                  <td>8</td>
-                </tr>
-                <tr>
-                  <td>Môn 4</td>
-                  <td>7</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+        <div class="result-container" id="result-container"></div>
       </div>
     </main>
+    <script src="../js/ketqua_tracuu.js"></script>
   </body>
 </html>

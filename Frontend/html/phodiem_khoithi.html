@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phổ điểm thi đại học</title>
+    <link rel="stylesheet" href="../css/navigate.css" />
+    <link rel="stylesheet" href="../css/phodiem.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=K2D:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">BIT-BAV</div>
+      <nav>
+        <ul>
+          <li><a class="dichuot" href="/index.html">Trang chủ</a></li>
+          <li>
+            <a class="dichuot" href="tracuu.html">Tra cứu điểm thi đại học</a>
+          </li>
+          <li><a href="#" class="active">Phổ điểm thi đại học</a></li>
+          <li>
+            <a class="dichuot" href="diemchuan.html">Điểm chuẩn CĐ - ĐH</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-content">
+      <h1 class="main-title">Phổ điểm thi tốt nghiệp THPT</h1>
+
+      <div class="filter-bar">
+        <button class="filter-btn" data-target="mon-thi-page">
+          Phổ điểm theo môn thi
+        </button>
+        <button class="filter-btn active" data-target="khoi-thi-page">
+          Phổ điểm theo khối thi
+        </button>
+        <button class="filter-btn" data-target="tinh-thanh-page">
+          Điểm trung bình các tỉnh thành
+        </button>
+
+        <label for="khoi-thi-select">Khối thi</label>
+        <select name="khoi-thi" id="khoi-thi-select">
+          <option value="tatca">Tất cả</option>
+          <option value="khoia">Khối A</option>
+          <option value="khoia1">Khối A1</option>
+          <option value="khoib">Khối B</option>
+          <option value="khoic">Khối C</option>
+          <option value="khoic1">Khối C1</option>
+          <option value="khoid">Khối D</option>
+          <option value="khoid1">Khối D1</option>
+        </select>
+      </div>
+
+      <div class="subject-cards-container" id="khoi-thi-cards-container"></div>
+
+      <div
+        class="score-distribution-container"
+        id="score-distribution-container"
+      ></div>
+    </div>
+
+    <script src="../js/phodiem_khoithi.js"></script>
+  </body>
+</html>

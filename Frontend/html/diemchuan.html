@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +22,9 @@
             <a class="dichuot" href="tracuu.html">Tra cứu điểm thi đại học</a>
           </li>
           <li>
-            <a class="dichuot" href="phodiem.html">Phổ điểm thi đại học</a>
+            <a class="dichuot" href="phodiem_monthi.html"
+              >Phổ điểm thi đại học</a
+            >
           </li>
           <li><a href="#" class="active">Điểm chuẩn CĐ - ĐH</a></li>
         </ul>
@@ -84,19 +87,13 @@
               <th>Địa chỉ</th>
             </tr>
           </thead>
-          <tbody>
-            {/* Ví dụ dữ liệu */}
-            <tr>
-              <td className="p-2">1</td>
-              <td className="p-2">Công nghệ thông tin</td>
-              <td className="p-2">25.5</td>
-              <td className="p-2">Đại học</td>
-              <td className="p-2">A00</td>
-              <td className="p-2">Hà Nội</td>
-            </tr>
+          <tbody id="results-table-body">
+            {/* Dữ liệu sẽ được chèn vào đây bằng JavaScript */}
           </tbody>
         </table>
       </div>
     </div>
+
+    <script src="../js/diemchuan.js"></script>
   </body>
 </html>

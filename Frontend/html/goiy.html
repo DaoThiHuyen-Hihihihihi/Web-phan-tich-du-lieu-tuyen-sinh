@@ -17,7 +17,9 @@
             <a class="dichuot" href="tracuu.html">Tra cứu điểm thi đại học</a>
           </li>
           <li>
-            <a class="dichuot" href="phodiem.html">Phổ điểm thi đại học</a>
+            <a class="dichuot" href="phodiem_monthi.html"
+              >Phổ điểm thi đại học</a
+            >
           </li>
           <li>
             <a class="dichuot" href="diemchuan.html">Điểm chuẩn CĐ - ĐH</a>
@@ -29,7 +31,7 @@
       <section class="suggestion-form">
         <h1>Gợi ý ngành, trường học phù hợp</h1>
         <p>Bạn đang chưa biết ngành học hay trường học phù hợp?</p>
-        <form>
+        <form id="suggestion-form">
           <div class="form-row">
             <div class="form-group">
               <label for="diem-thi">Điểm thi *:</label>
@@ -67,7 +69,8 @@
               <label>Chọn Khu vực</label>
               <div class="khu-vuc-group">
                 <button type="button" class="khu-vuc-btn">
-                  Chọn Khu vực <span class="badge">0</span>
+                  <span>Chọn khu vực</span>
+                  <span class="badge">0</span>
                 </button>
                 <div class="checkbox-group">
                   <input type="checkbox" id="bac" name="khu-vuc" value="bac" />
@@ -101,5 +104,6 @@
         </form>
       </section>
     </main>
+    <script src="../js/goiy.js"></script>
   </body>
 </html>

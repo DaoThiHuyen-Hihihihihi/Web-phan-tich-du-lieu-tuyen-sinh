@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +22,9 @@
             <a class="dichuot" href="tracuu.html">Tra cứu điểm thi đại học</a>
           </li>
           <li>
-            <a class="dichuot" href="phodiem.html">Phổ điểm thi đại học</a>
+            <a class="dichuot" href="phodiem_monthi.html"
+              >Phổ điểm thi đại học</a
+            >
           </li>
           <li>
             <a class="dichuot" href="diemchuan.html">Điểm chuẩn CĐ - ĐH</a>
@@ -29,11 +32,12 @@
         </ul>
       </nav>
     </header>
+
     <main>
       <section class="suggestion-form">
         <h1>Gợi ý ngành, trường học phù hợp</h1>
         <p>Bạn đang chưa biết ngành học hay trường học phù hợp?</p>
-        <form>
+        <form id="suggestion-form">
           <div class="form-row">
             <div class="form-group">
               <label for="diem-thi">Điểm thi *:</label>
@@ -104,10 +108,11 @@
           </div>
         </form>
       </section>
+
       <div class="container">
         <h1>Danh sách các trường và ngành học phù hợp</h1>
         <div class="table-container">
-          <table>
+          <table id="results-table">
             <thead>
               <tr>
                 <th>TÊN TRƯỜNG</th>
@@ -118,60 +123,19 @@
                 <th>HỆ ĐẠI HỌC</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Macbook Pro</td>
-                <td>Electronics</td>
-                <td>ELEC-1001</td>
-                <td>2</td>
-                <td>2999 AZN</td>
-                <td>20.09.2024</td>
-              </tr>
-              <tr class="highlight">
-                <td>Macbook Air</td>
-                <td>Electronics</td>
-                <td>ELEC-1002</td>
-                <td>4</td>
-                <td>1499 AZN</td>
-                <td>19.09.2024</td>
-              </tr>
-              <tr>
-                <td>Iphone 15 Pro</td>
-                <td>Electronics</td>
-                <td>CLOTH-BLK-M</td>
-                <td>5</td>
-                <td>3999 AZN</td>
-                <td>18.09.2024</td>
-              </tr>
-              <tr class="highlight">
-                <td>Iphone 15 Pro Max</td>
-                <td>Electronics</td>
-                <td>CLOTH-BLK-L</td>
-                <td>10</td>
-                <td>4499 AZN</td>
-                <td>18.09.2024</td>
-              </tr>
-              <tr>
-                <td>Iphone 15</td>
-                <td>Electronics</td>
-                <td>COSM-ARM-202</td>
-                <td>12</td>
-                <td>1999 AZN</td>
-                <td>17.09.2024</td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
           </table>
         </div>
         <div class="pagination">
           <div class="page-nav">
-            <a href="#"><</a>
+            <a href="#">&lt;</a>
             <a href="#">1</a>
             <a href="#" class="active">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <span>...</span>
             <a href="#">10</a>
-            <a href="#">></a>
+            <a href="#">&gt;</a>
           </div>
           <div class="show-rows">
             <span>Showing</span>
@@ -184,5 +148,7 @@
         </div>
       </div>
     </main>
+
+    <script src="../js/danhsachketqua.js"></script>
   </body>
 </html>
